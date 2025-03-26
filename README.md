@@ -1,6 +1,6 @@
 Task Management Web App 📝
-Overview
 
+Overview
 This is a Full Stack Task Management Web App built using:
 
     Backend: Node.js, Express, SQLite
@@ -45,7 +45,7 @@ Setup & Installation ⚙️
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 
-2️⃣ Backend Setup
+2️⃣ Backend Setup 
 
 cd backend
 npm install
