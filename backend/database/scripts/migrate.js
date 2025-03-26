@@ -1,7 +1,8 @@
+"use strict";
 // import pool from "../../config/db";
 // import fs from "fs";
 // import path from "path";
-
+Object.defineProperty(exports, "__esModule", { value: true });
 // async function migrate() {
 //   try {
 //     // Ensure the migrations table exists
@@ -12,34 +13,28 @@
 //         applied_at TIMESTAMP DEFAULT NOW()
 //       );
 //     `);
-
 //     // Get list of already applied migrations
 //     const { rows: appliedMigrations } = await pool.query(
 //       "SELECT filename FROM migrations"
 //     );
 //     const appliedFiles = appliedMigrations.map((row) => row.filename);
-
 //     // Read all migration files
 //     const migrationFiles = fs
 //       .readdirSync(path.join(__dirname, "../migrations"))
 //       .sort();
-
 //     for (const file of migrationFiles) {
 //       if (appliedFiles.includes(file)) {
 //         console.log(`⚡ Skipping already applied migration: ${file}`);
 //         continue; // Skip if already applied
 //       }
-
 //       // Read and run the migration
 //       const sql = fs.readFileSync(
 //         path.join(__dirname, `../migrations/${file}`),
 //         "utf-8"
 //       );
 //       await pool.query(sql);
-
 //       // Insert into migrations table to track it
 //       await pool.query("INSERT INTO migrations (filename) VALUES ($1)", [file]);
-
 //       console.log(`✅ Applied migration: ${file}`);
 //     }
 //   } catch (err) {
@@ -48,5 +43,4 @@
 //     pool.end();
 //   }
 // }
-
 // migrate();
